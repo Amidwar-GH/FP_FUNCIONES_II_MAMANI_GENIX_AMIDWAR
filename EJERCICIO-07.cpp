@@ -28,16 +28,11 @@ int main(){
 		cout<<"-----------------------------------------------------"<<endl;
 		cout<<"JUGADOR A, DIGITE CUALQUIER LETRA PARA GIRAR EL DADO."<<endl;
 		cin>>RESPUESTA;
-		if(RESPUESTA == 'X'){
-			JUGADOR_A=NumeroAzar();
-		}
-		
+		JUGADOR_A= NumeroAzar();
 		
 		cout<<"JUGADOR B, DIGITE CUALQUIER LETRA PARA GIRAR EL DADO."<<endl;
 		cin>>RESPUESTA1;
-		if(RESPUESTA1 =='X'){
-			JUGADOR_B=NumeroAzar();
-		}
+		JUGADOR_B = NumeroAzar();
 		
 		cout<<"JUGADOR_A SACO: "<<JUGADOR_A<<endl;
 		cout<<"JUGADOR_B SACO: "<<JUGADOR_B<<endl;
@@ -47,19 +42,28 @@ int main(){
 			VICTORIAS_B +=1;
 		}else if(JUGADOR_A > JUGADOR_B){
 			cout<<"EL JUGADOR A GANO ESTA RONDA."<<endl;
+			VICTORIAS_A +=1;
 		}else{
 			cout<<"ES UN EMPATE.";
 		}
 		
 		cout<<endl;
-		cout<<"EL PUNTAJE DE JUGADOR A ES "<<VICTORIAS_A<<endl;
-		cout<<"EL PUNTAJE DE JUGADOR B ES "<<VICTORIAS_B<<endl;
+		cout<<endl;
+		cout<<"*****EL PUNTAJE DE JUGADOR A ES***** "<<endl;
+		cout<<"                 "<<"["<<VICTORIAS_A<<"]"<<endl;
+		cout<<endl;
+		cout<<"*****EL PUNTAJE DE JUGADOR B ES***** "<<endl;
+		cout<<"                 "<<"["<<VICTORIAS_B<<"]"<<endl;
 		cout<<endl;
 		
 		
 	}while(VICTORIAS_A <3 && VICTORIAS_B <3);
 	
-	
+	if(VICTORIAS_A==3){
+		cout<<"FELICIDADES, GANO EL JUGADOR A."<<endl;
+	}else{
+		cout<<"FELICIDADES, GANO EL JUGADOR B."<<endl;
+	}
 	
 	
 	
