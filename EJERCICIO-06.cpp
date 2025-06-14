@@ -10,18 +10,25 @@ resultado final indicando el ganador del juego.*/
 using namespace std;
 
 int main(){
-	int JUGADA, VIDAS_DEL_USUARIO, VIDAS_DEL_CPU;
+	int JUGADA,CPU, VICTORIAS_DEL_USUARIO = 0, VICTORIAS_DEL_CPU = 0;
+	char NOMBRE[50];
+	cout<<"DIGITE SU NOMBRE: "; cin>>NOMBRE;
 	srand(time(0)); //incializamos el gerador de numeros aleatorios
-	int CPU = rand() % 3 + 1;
-	cout<<"Digite un numero: "<<endl;
-	cout<<"1. PIEDRA."<<endl;
-	cout<<"2. PAPEL."<<endl;
-	cout<<"3. TIJERA."<<endl;
-	cin>>JUGADA;
-	if(JUGADA){
+	
+	do{
+		cout<<NOMBRE<<" digite el numero de su jugada."<<endl;
+		cout<<"1. PIEDRA."<<endl;
+		cout<<"2. PAPEL."<<endl;
+		cout<<"3. TIJERA."<<endl;
+		cin>>JUGADA;
 		
-	}
-	cout<<CPU;
+		while(JUGADA<1 || JUGADA >3){
+			cout<<"JUGADA INVALIDA, DIGITE DENUEVO UNA JUGADA: "; cin>>JUGADA;
+		}
+		
+		CPU = rand() % 3 + 1;
+		
+	}while( VICTORIAS_DEL_USUARIO<3 && VICTORIAS_DEL_CPU<3);
 	
 	
 	
