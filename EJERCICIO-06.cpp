@@ -14,8 +14,14 @@ int main(){
 	char NOMBRE[50];
 	cout<<"DIGITE SU NOMBRE: "; cin>>NOMBRE;
 	srand(time(0)); //incializamos el gerador de numeros aleatorios
+	cout<<"----------------------------------"<<endl;
+	cout<<"BIENVENIDO AL GAME "<<NOMBRE<<endl;
+	cout<<"----------------------------------"<<endl;
+	
 	
 	do{
+		cout<<endl;
+		cout<<"---------------------------------------"<<endl;
 		cout<<NOMBRE<<" digite el numero de su jugada."<<endl;
 		cout<<"1. PIEDRA."<<endl;
 		cout<<"2. PAPEL."<<endl;
