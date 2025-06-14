@@ -10,10 +10,51 @@ o decida salir. Usa funciones y números aleatorios*/
 #include<ctime>
 using namespace std;
 
+int GeneradordeNUMEROS(){
+	return rand()%5+1;
+}
+
+
+
 int main(){
+	int MONEDAS=100,Primernumero,Segundonumero,Tercernumero,APUESTA;
+	srand(time(0));
 	
+	cout<<"BIENVENIDO AL CASINO, SOY AMIDWAR SU ANFITRION."<<endl;
+	cout<<endl;
+	cout<<"<Monedas actuales = 100>"<<endl;
+	cout<<endl;
 	
-	
+	do{
+		do{
+			cout<<"Puedes apostar entre 1 y 10 monedas por ronda."<<endl;
+			cout<<"¿Cuantas monedas deseas apostar?"<<endl;
+			cin>>APUESTA;
+			if(APUESTA<1 || APUESTA>10 || APUESTA>MONEDAS){
+				cout<<"Apuesta invalida, digite una apuesta nuevamente."<<endl;
+			}
+		}while(APUESTA<1 || APUESTA>10 || APUESTA > MONEDAS);
+		
+		
+		
+		cout<<"El primer numero que se te genero es ";
+		Primernumero=GeneradordeNUMEROS();
+		cout<<"["<<Primernumero<<"]"<<endl;
+		
+		
+		cout<<"El segundo numero que se te genero es ";
+		Segundonumero=GeneradordeNUMEROS();
+		cout<<"["<<Segundonumero<<"]"<<endl;
+		
+		
+		cout<<"El tercer numero que se te genero es ";
+		Tercernumero=GeneradordeNUMEROS();
+		cout<<"["<<Tercernumero<<"]"<<endl;
+		
+		
+		
+		
+	}while(Primernumero==100);
 	
 	
 	
