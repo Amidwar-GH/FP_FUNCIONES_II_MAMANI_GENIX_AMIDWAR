@@ -51,6 +51,19 @@ int main(){
 		Tercernumero=GeneradordeNUMEROS();
 		cout<<"["<<Tercernumero<<"]"<<endl;
 		
+		if(Primernumero == Segundonumero && Segundonumero == Tercernumero){
+			cout<<"Felicidades, acertaste en 3 numeros iguales."<<endl;
+			APUESTA *=10;
+		}else if(Primernumero == Segundonumero || Primernumero == Tercernumero){
+			cout<<"Felicidades, acertaste 2 numeros iguales."<<endl;
+			APUESTA *=2;
+		}else if((Primernumero==Segundonumero+1 && Segundonumero==Tercernumero+1)|| (Primernumero==Segundonumero-1 && Segundonumero==Tercernumero-1)){
+			cout<<"Felicidades, hiciste una escalera."<<endl;
+			APUESTA*=5;
+		}else{
+			cout<<"Perdiste.";
+			MONEDAS -=APUESTA;
+		}
 		
 		
 		
