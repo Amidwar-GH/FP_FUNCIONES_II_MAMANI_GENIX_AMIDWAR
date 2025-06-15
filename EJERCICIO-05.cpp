@@ -7,14 +7,33 @@ actualizar las variables correspondientes.*/
 #include<iostream>
 #include<cmath>
 
+void calcularRaices(int a,int b,int c,double &r1, double &r2, bool &reales){
+	double Discriminante = pow(b,2)-(4*a*c);
+	if(Discriminante<0){
+		reales = false;
+	}else{
+		r1=(-b+(sqrt(Discriminante)))/(2*a);
+		r2=(-b-(sqrt(Discriminante)))/(2*a);
+	}
+}
+
+
 int main(){
 	int a,b,c,reales;
 	cout<<"Digite el coeficiente del termino cuadratico: "; cin>>a;
 	cout<<"Digite el coeficiente del termino lineal: "; cin>>b;
 	cout<<"Digite el termino independiente: "; cin>>c;
 	
+	//llamamos a la funcion
+	calcularRaices(a,b,c,r1,r2,reales);
 	
-	
+	reales = true;
+	if(reales == true){
+		cout<<r1<<endl;
+		cout<<r2<<endl;
+	}else{
+		cout<<"Tiene raices complejas."
+	}
 	
 	return 0;
 }
