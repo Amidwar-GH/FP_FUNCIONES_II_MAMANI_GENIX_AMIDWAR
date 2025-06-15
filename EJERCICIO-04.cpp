@@ -7,6 +7,18 @@ raíces obtenidas. Considera los casos en los que las raíces son reales o complej
 #include<cmath>
 using namespace std;
 
+float RAIZ2(float a,float b,float c){
+	float RAIZ_2;
+	RAIZ_2=(-b-sqrt(pow(b,2)-4*a*c))/(2*a);
+	return RAIZ_2;
+}
+
+float RAIZ1(float a,float b,float c){
+	float RAIZ_1;
+	RAIZ_1=(-b+sqrt(pow(b,2)-4*a*c))/(2*a);
+	return RAIZ_1;
+}
+
 void ENTRADA(){
 	cout<<"----------------------"<<endl;
 	cout<<"BIENVENIDO AL PROGRMA."<<endl;
@@ -14,7 +26,7 @@ void ENTRADA(){
 }
 
 int main(){
-	float a,b,c,DISCRIMINANTE,R1,R2;
+	float a,b,c,DISCRIMINANTE,RAIZ_1,RAIZ_2,R1,R2;
 	
 	
 	ENTRADA();
