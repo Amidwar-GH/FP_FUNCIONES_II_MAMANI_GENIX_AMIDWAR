@@ -40,8 +40,10 @@ int main(){
 		cout<<"La primera raiz es "<<r1<<endl;
 		cout<<"La segunda raiz es "<<r2<<endl;
 	}else{
-		cout<<"Tiene raices complejas.";
+		cout<<"Tiene raices complejas."<<endl;
 	}
+	
+	cout<<"PROGRAMA FINALIZADO.";
 	
 	return 0;
 }
