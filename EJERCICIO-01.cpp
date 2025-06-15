@@ -17,6 +17,7 @@ int main(){
 	cout<<"Digite el radio del circulo: "; cin>>r;
 	
 	Areadelcirculo=FuncionCirculo(r);
-	cout<<"El area del circulo es "<<Areadelcirculo;
+	cout<<"El area del circulo es "<<Areadelcirculo<<endl;
+	cout<<"PROGRAMA FINALIZADO.";
 	return 0;
 }
