@@ -43,6 +43,7 @@ int main(){
 		cout<<"Tiene raices complejas."<<endl;
 	}
 	
+	//finalizacion de programa.
 	cout<<"PROGRAMA FINALIZADO.";
 	
 	return 0;
