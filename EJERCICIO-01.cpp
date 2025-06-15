@@ -7,6 +7,11 @@ resultado del área calculada*/
 #include<cmath>
 using namespace std;
 
+float FuncionCirculo(float r){
+	float Area= M_PI*pow(r,2);
+	return Area;
+}
+
 int main(){
 	float r,Areadelcirculo;
 	cout<<"Digite el radio del circulo: "; cin>>r;
