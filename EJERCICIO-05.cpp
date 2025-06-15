@@ -23,19 +23,24 @@ int main(){
 	int a,b,c;
 	double r1,r2;
 	bool reales;
-	cout<<"Digite el coeficiente del termino cuadratico: "; cin>>a;
-	cout<<"Digite el coeficiente del termino lineal: "; cin>>b;
-	cout<<"Digite el termino independiente: "; cin>>c;
+	
+	cout<<"FORMA DE LA ECUACION ACUADRATICA"<<endl;
+	cout<<"           ax^2+bx+c"<<endl;
+	cout<<endl;
+	cout<<"Digite el coeficiente del termino cuadratico [a]: "; cin>>a;
+	cout<<"Digite el coeficiente del termino lineal [b]: "; cin>>b;
+	cout<<"Digite el termino independiente [c]: "; cin>>c;
 	
 	//llamamos a la funcion
 	calcularRaices(a,b,c,r1,r2,reales);
 	
 	reales = true;
 	if(reales == true){
-		cout<<r1<<endl;
-		cout<<r2<<endl;
+		cout<<endl;
+		cout<<"La primera raiz es "<<r1<<endl;
+		cout<<"La segunda raiz es "<<r2<<endl;
 	}else{
-		cout<<"Tiene raices complejas."
+		cout<<"Tiene raices complejas.";
 	}
 	
 	return 0;
