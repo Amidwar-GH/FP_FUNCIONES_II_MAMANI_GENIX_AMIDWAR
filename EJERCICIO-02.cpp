@@ -9,16 +9,16 @@ rand de la librería cstdlib para generar los números aleatorios.*/
 using namespace std;
 
 int main(){
-	int limite,NumeroAleatorio;
+	int limite,NumeroAleatorio,cantidad;
 	srand(time(0));
 	
+	cout<<"Digite la cantidad de numeros aleatorios: "; cin>>cantidad;
+	cout<<"Digite el limite de numeros aleatorios: "; cin>>limite;
 	
-	NumeroAleatorio=rand()%limite+1;
-	cout<<NumeroAleatorio;
-	
-	
-	
-	
+	for(int i=0; i<cantidad; i++){
+		NumeroAleatorio=rand()%(limite+1);
+		cout<<NumeroAleatorio<<" ";
+	}
 	
 	return 0;
 }
