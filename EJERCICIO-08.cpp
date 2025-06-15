@@ -17,19 +17,24 @@ int GeneradordeNUMEROS(){
 
 
 int main(){
+	char CONTINUAR;
 	int MONEDAS=100,Primernumero,Segundonumero,Tercernumero,APUESTA;
 	srand(time(0));
 	
-	cout<<"BIENVENIDO AL CASINO, SOY AMIDWAR SU ANFITRION."<<endl;
+	cout<<"*************MONEDA LOOOKA***********"<<endl;
+	cout<<endl;
+	cout<<"BIENVENIDO, SOY AMIDWAR SU ANFITRION."<<endl;
 	cout<<endl;
 	cout<<"<Monedas actuales = 100>"<<endl;
 	cout<<endl;
 	
 	do{
+		cout<<"---------------------------------------------"<<endl;
 		do{
 			cout<<"Puedes apostar entre 1 y 10 monedas por ronda."<<endl;
 			cout<<"¿Cuantas monedas deseas apostar?"<<endl;
 			cin>>APUESTA;
+			cout<<endl;
 			if(APUESTA<1 || APUESTA>10 || APUESTA>MONEDAS){
 				cout<<"Apuesta invalida, digite una apuesta nuevamente."<<endl;
 			}
@@ -53,24 +58,37 @@ int main(){
 		
 		if(Primernumero == Segundonumero && Segundonumero == Tercernumero){
 			cout<<"Felicidades, acertaste en 3 numeros iguales."<<endl;
-			APUESTA *=10;
+			cout<<"Tu apuesta se multiplica x10"<<endl;
+			MONEDAS = MONEDAS+APUESTA*10;
 		}else if(Primernumero == Segundonumero || Primernumero == Tercernumero){
 			cout<<"Felicidades, acertaste 2 numeros iguales."<<endl;
-			APUESTA *=2;
+			cout<<"Tu apuesta se multiplica x2"<<endl;
+			MONEDAS = MONEDAS+APUESTA *2;
 		}else if((Primernumero==Segundonumero+1 && Segundonumero==Tercernumero+1)|| (Primernumero==Segundonumero-1 && Segundonumero==Tercernumero-1)){
 			cout<<"Felicidades, hiciste una escalera."<<endl;
-			APUESTA*=5;
+			cout<<"Tu apuesta se multiplica x5"<<endl;
+			MONEDAS = MONEDAS+APUESTA*5;
 		}else{
-			cout<<"Perdiste.";
-			MONEDAS -=APUESTA;
+			cout<<"NO HUBO NINGUNA COMBINACION, INTENTALO DENUEVO.";
+			MONEDAS=MONEDAS-APUESTA;
 		}
 		
+		cout<<endl;
+		cout<<"-------------------------"<<endl;
+		cout<<"<Monedas actuales ="<<MONEDAS<<">"<<endl;
+		cout<<"-------------------------"<<endl;
 		
+		if(MONEDAS<=0){
+			cout<<"Lastima, te quedaste sin monedas."<<endl;
+			break;	
+		}
 		
-	}while(Primernumero==100);
+		cout<<"Desea continuar? (S/N): "; cin>>CONTINUAR;
+		
+	}while((CONTINUAR =='S'|| CONTINUAR == 's') && MONEDAS>0);
 	
-	
-	
+	cout<<endl<<endl;
+	cout<<"Gracias por jugar"<<endl;
 	
 	return 0;
 }
