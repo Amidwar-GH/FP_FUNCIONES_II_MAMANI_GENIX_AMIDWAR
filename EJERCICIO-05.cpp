@@ -6,6 +6,7 @@ actualizar las variables correspondientes.*/
 
 #include<iostream>
 #include<cmath>
+using namespace std;
 
 void calcularRaices(int a,int b,int c,double &r1, double &r2, bool &reales){
 	double Discriminante = pow(b,2)-(4*a*c);
@@ -19,7 +20,9 @@ void calcularRaices(int a,int b,int c,double &r1, double &r2, bool &reales){
 
 
 int main(){
-	int a,b,c,reales;
+	int a,b,c;
+	double r1,r2;
+	bool reales;
 	cout<<"Digite el coeficiente del termino cuadratico: "; cin>>a;
 	cout<<"Digite el coeficiente del termino lineal: "; cin>>b;
 	cout<<"Digite el termino independiente: "; cin>>c;
