@@ -60,14 +60,20 @@ int main(){
 			cout<<"Felicidades, acertaste en 3 numeros iguales."<<endl;
 			cout<<"Tu apuesta se multiplica x10"<<endl;
 			MONEDAS = MONEDAS+APUESTA*10;
-		}else if(Primernumero == Segundonumero || Primernumero == Tercernumero){
+			
+			
+		}else if(Primernumero == Segundonumero || Primernumero == Tercernumero || Segundonumero==Tercernumero){
 			cout<<"Felicidades, acertaste 2 numeros iguales."<<endl;
 			cout<<"Tu apuesta se multiplica x2"<<endl;
 			MONEDAS = MONEDAS+APUESTA *2;
+			
+			
 		}else if((Primernumero==Segundonumero+1 && Segundonumero==Tercernumero+1)|| (Primernumero==Segundonumero-1 && Segundonumero==Tercernumero-1)){
 			cout<<"Felicidades, hiciste una escalera."<<endl;
 			cout<<"Tu apuesta se multiplica x5"<<endl;
 			MONEDAS = MONEDAS+APUESTA*5;
+			
+			
 		}else{
 			cout<<"NO HUBO NINGUNA COMBINACION, INTENTALO DENUEVO.";
 			MONEDAS=MONEDAS-APUESTA;
